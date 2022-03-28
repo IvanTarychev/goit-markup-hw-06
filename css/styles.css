@@ -556,6 +556,9 @@ ul {
 }
 
 .btn {
+  display: block;
+  margin-right: auto;
+  margin-left: auto;
   border-radius: 4px;
   padding: 10px 32px;
   cursor: pointer;
@@ -812,7 +815,7 @@ ul {
 }
 
 .order-label {
-  margin-bottom: 4px;
+  position: relative;
 
   color: var(--text-color);
   font-size: 12px;
@@ -826,16 +829,50 @@ ul {
 
 .order-input {
   display: inline-block;
+
+  margin-top: 4px;
+  padding-left: 42px;
+
+  width: 100%;
   height: 40px;
   border: 1px solid var(--form-color-border);
   border-radius: 4px;
+
+  transition: outline 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.order-icon {
+  position: absolute;
+  left: 15px;
+  bottom: 14px;
+
+  display: inline-block;
+
+  width: 12px;
+  height: 12px;
+
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.order-input:focus-visible {
+  outline: 1px solid var(--hover-color);
+}
+
+.order-input:focus ~ .order-icon {
+  fill: var(--hover-color);
 }
 
 .order-comment {
   height: 120px;
   resize: none;
+
+  padding: 12px 16px;
   border: 1px solid var(--form-color-border);
   border-radius: 4px;
+}
+
+.order-comment:focus-visible {
+  outline: 1px solid var(--hover-color);
 }
 
 .confirm-box {
