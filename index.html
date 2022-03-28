@@ -406,24 +406,31 @@
 
             <form class="order-form">
                 <p class="order-txt">Оставьте свои контакты, мы вам перезвоним</p>
+                    
+                <div class="order-box">
+                    <label class="order-label" for="name">Имя</label>
+                    <input class="order-input" type="name" id="name">
+                    
+                    <label class="order-label" for="tel">Телефон</label>
+                    <input class="order-input" type="tel" id="tel">
+                    
+                    <label class="order-label" for="mail">Почта</label>
+                    <input class="order-input" type="mail" id="mail">
+                    
+                    <label class="order-label" for="comment">Коментарий</label>
+                    <textarea class="order-comment" name="comment" id="comment" placeholder="Введите текст"></textarea>
+                </div>
 
-                <label for="name">Имя</label>
-                <input type="name" id="name">
+                <div class="confirm-box">
+                    <input class="confirm-check" type="checkbox" id="confirm">
+                    <label class="confirm-txt" for="comfirm">Соглашаюсь с рассылкой и принимаю <a class="confirm-link" href="">Условиями договора</a></label>
+                </div>
+
+                <div class="button-container">
+                    <button class="btn btn-submit" type="submit">Отправить</button>
+                </div>
                 
-                <label for="tel">Телефон</label>
-                <input type="tel" id="tel">
-
-                <label for="mail">Почта</label>
-                <input type="mail" id="mail">
-
-                <label for="comment">Коментарий</label>
-                <textarea name="comment" id="comment" placeholder="Введите текст"></textarea>
-
-                <input type="checkbox" id="confirm">
-                <label for="comfirm">соглашаюсь с рассылкой и принимаю <a class="link-confirm" href="">Условиями договора</a></label>
             </form>
-
-            <button class="btn">Отправить</button>
         </div>
     </div>
     <script src="./js/modal.js"></script>

@@ -15,6 +15,7 @@
   --modal-bg-color: rgba(0, 0, 0, 0.2);
   --btn-border-color: rgba(0, 0, 0, 0.1);
   --card-subtitle-bg-color: rgba(47, 48, 58, 0.8);
+  --form-color-border: rgba(33, 33, 33, 0.2);
 }
 
 body {
@@ -790,7 +791,82 @@ ul {
 
 /* ORDER FORM */
 
-.order-form {
+.order-box {
   display: flex;
   flex-direction: column;
+
+  margin-top: 12px;
+  margin-right: 40px;
+  margin-left: 40px;
+  width: 448px;
+  height: 342px;
+}
+
+.order-txt {
+  margin-top: 40px;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 1.15;
+  text-align: center;
+  letter-spacing: 0.03em;
+}
+
+.order-label {
+  margin-bottom: 4px;
+
+  color: var(--text-color);
+  font-size: 12px;
+  line-height: 1.16;
+  letter-spacing: 0.01em;
+}
+
+.order-label ~ .order-label {
+  margin-top: 10px;
+}
+
+.order-input {
+  display: inline-block;
+  height: 40px;
+  border: 1px solid var(--form-color-border);
+  border-radius: 4px;
+}
+
+.order-comment {
+  height: 120px;
+  resize: none;
+  border: 1px solid var(--form-color-border);
+  border-radius: 4px;
+}
+
+.confirm-box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  margin-top: 20px;
+}
+
+.confirm-check {
+  margin-right: 7px;
+}
+
+.confirm-txt {
+  color: var(--text-color);
+  font-size: 14px;
+  line-height: 1.71;
+  letter-spacing: 0.03em;
+}
+
+.confirm-link {
+  color: var(--hover-color);
+  font-size: 14px;
+  line-height: 1.71;
+  letter-spacing: 0.03em;
+}
+
+.button-container {
+  margin-top: 30px;
+
+  vertical-align: baseline;
+  text-align: center;
 }
