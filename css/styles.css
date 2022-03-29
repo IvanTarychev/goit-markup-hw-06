@@ -725,6 +725,57 @@ ul {
   margin-left: 70px;
 }
 
+/* SUBSCRIBE */
+
+.subscribe-box {
+  margin-left: 93px;
+}
+
+.subscribe-form {
+  display: flex;
+}
+
+.subscribe-input {
+  display: inline-block;
+
+  margin-top: 20px;
+  padding-left: 16px;
+
+  width: 358px;
+  height: 50px;
+  background-color: inherit;
+  border: 1px solid var(--semi-transparent-color);
+  border-radius: 4px;
+
+  color: var(--white-color);
+
+  transition: outline 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    border 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.subscribe-input:focus-visible {
+  outline: 0.5px solid var(--hover-color);
+  border: 0.5px solid var(--hover-color);
+}
+
+.btn-subscribe {
+  display: flex;
+  align-items: center;
+
+  height: 50px;
+  margin-top: 20px;
+  margin-left: 12px;
+}
+
+.icon-send {
+  width: 24px;
+  height: 24px;
+
+  margin-left: 10px;
+
+  fill: var(--white-color);
+}
+
 /* MODAL WINDOW */
 
 .backdrop {
@@ -808,7 +859,7 @@ ul {
 .order-txt {
   margin-top: 40px;
   font-weight: 700;
-  font-size: 20px;
+  font-size: 19px;
   line-height: 1.15;
   text-align: center;
   letter-spacing: 0.03em;
@@ -838,7 +889,8 @@ ul {
   border: 1px solid var(--form-color-border);
   border-radius: 4px;
 
-  transition: outline 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: outline 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    border 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .order-icon {
@@ -855,11 +907,18 @@ ul {
 }
 
 .order-input:focus-visible {
-  outline: 1px solid var(--hover-color);
+  outline: 0.5px solid var(--hover-color);
+  border: 0.5px solid var(--hover-color);
 }
 
 .order-input:focus ~ .order-icon {
   fill: var(--hover-color);
+}
+
+/* COMMENT */
+
+.comment-label {
+  margin-bottom: 4px;
 }
 
 .order-comment {
@@ -869,22 +928,57 @@ ul {
   padding: 12px 16px;
   border: 1px solid var(--form-color-border);
   border-radius: 4px;
+
+  transition: outline 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    border 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .order-comment:focus-visible {
-  outline: 1px solid var(--hover-color);
+  outline: 0.5px solid var(--hover-color);
+  border: 0.5px solid var(--hover-color);
 }
 
-.confirm-box {
+/* CONFIRM */
+
+.confirm-label {
   display: flex;
   justify-content: center;
   align-items: center;
 
   margin-top: 20px;
+  cursor: pointer;
 }
 
 .confirm-check {
-  margin-right: 7px;
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
+.confirm-icon {
+  display: inline-block;
+  width: 16px;
+  height: 15px;
+
+  margin-right: 8px;
+  border: 2px solid var(--main-color);
+  border-radius: 4px;
+}
+
+.confirm-check:checked + .confirm-icon {
+  border-color: var(--hover-color);
+  background-color: var(--hover-color);
+  background-image: url(../images/icon-check.svg);
+  background-size: contain;
+  background-origin: border-box;
 }
 
 .confirm-txt {
