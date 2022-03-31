@@ -649,7 +649,7 @@ ul {
   text-align: center;
 }
 
-.subtitle {
+.foot-menu .subtitle {
   color: var(--white-color);
   font-weight: bold;
   text-transform: uppercase;
@@ -718,7 +718,7 @@ ul {
   line-height: 1.7;
 }
 
-.footer-box {
+.foot-menu > .container {
   display: flex;
   align-items: baseline;
 }
@@ -730,7 +730,7 @@ ul {
 /* SUBSCRIBE */
 
 .subscribe-box {
-  margin-left: 93px;
+  margin-left: auto;
 }
 
 .subscribe-form {
